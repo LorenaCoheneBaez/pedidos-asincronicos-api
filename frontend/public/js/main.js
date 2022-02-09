@@ -9,11 +9,11 @@ window.onload = () => {
   //Muestro el link a la pág de calificaciones
   if (localStorage.getItem('calificaciones') !== null) {
     const link = document.getElementById("favoritas");
-    link.innerHTML = '<a href="favoritas.html">Favoritas</a>';
+    link.innerHTML = '<a href="/favoritos">Favoritas</a>';
   }
   //Acá agrego enlace a pág agregar
   const agregar = document.getElementById("agregar");
-  agregar.innerHTML = '<a href="formulario.html">Agregar película</a>';
+  agregar.innerHTML = '<a href="/agregar">Agregar película</a>';
 
   // Aqui debemos agregar nuestro fetch
 
@@ -46,7 +46,7 @@ window.onload = () => {
         }
         //Acá guardo la info de la peli a la que se le hizo click
         const favoritas = document.createElement("p");
-        favoritas.innerHTML = `<div>&#9734;</div>`;
+        favoritas.innerHTML = `<div id="favoritos">&#9734;</div>`;
         favoritas.addEventListener("click", function (e) {
           e.preventDefault()
           if (localStorage.calificaciones) {
