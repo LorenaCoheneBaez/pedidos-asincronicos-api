@@ -3,6 +3,9 @@ const router = express.Router();
 const actorsAPIController = require('../../controllers/api/actorsAPIController');
 
 //Rutas
+
+// /api/actors
+
 //Listado de todos los actores
 router.get('/', actorsAPIController.list);
 //Detalle del actor

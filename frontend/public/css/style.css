@@ -1,14 +1,15 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   line-height: 1.6;
   color: #666;
-  background: #F6F6F6;
+  background: #f6f6f6;
+ background-color:  rgba(255, 192, 203, 0.295)
 }
 
 #root {
@@ -23,6 +24,7 @@ h1 {
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
   color: white;
+  background-color: rgba(255, 192, 203, 0.562);
 }
 
 img {
@@ -37,28 +39,55 @@ p {
 }
 
 .container {
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
+}
+
+a{
+margin-left: 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+a:hover{
+text-decoration: underline;
+font-size: 18px;
+font-weight: 600;
+}
+
+#clickFavoritas {
+  cursor: pointer;
+  color: #000;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+#clickFavoritas:hover{
+  border-top: 3px solid #ffc3a0;
 }
 
 .card {
   margin: 1rem;
   background: white;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .card:hover {
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
   transform: translate3D(0, -2px, 0);
 }
 .action {
   text-align: center;
+  background-color: rgba(102, 102, 102, 0.123);
 }
-.botonAgregar , .botonModificar{
-  color: white;
+.botonAgregar,
+.botonModificar {
+  color: #000;
   background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
   font-size: 1rem;
   padding: 10px;
@@ -66,15 +95,24 @@ p {
   border: 0;
   margin: 5px;
 }
-.botonBorrar{
+
+.botonAgregar:hover{
+  color: #fff;
+   background-image: linear-gradient(120deg, rgba(102, 102, 102, 0.685) 0%, #07327e 100%);
+}
+
+.botonBorrar {
   color: white;
-  background-image: linear-gradient(120deg, #BB2D3B 0%, #a6c1ee 100%);
+  background-image: linear-gradient(120deg, #bb2d3b 0%, #a6c1ee 100%);
   padding: 10px;
   border-radius: 10px;
   border: 0;
   margin: 5px;
 }
-.formulario{
+
+
+.formulario {
+  text-align: center;
   margin: auto;
   width: 40%;
   border-radius: 10px;
@@ -84,12 +122,13 @@ p {
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
 }
-input, select{
+input,
+select {
   width: 60%;
   height: 25px;
 }
 
-#favoritos{
+#favoritos {
   font-size: 22px;
 }
 
@@ -116,4 +155,3 @@ input, select{
 .card:nth-child(5n) h1 {
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
-

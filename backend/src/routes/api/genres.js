@@ -3,6 +3,9 @@ const router = express.Router();
 const genresAPIController = require('../../controllers/api/genresAPIController');
 
 //Rutas
+
+// /api/genres
+
 //Listado de todos los generos
 router.get('/', genresAPIController.list);
 //Detalle del genero

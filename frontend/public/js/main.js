@@ -3,7 +3,7 @@ window.onload = () => {
   const container = document.createElement("div");
   container.setAttribute("class", "container");
   app.appendChild(container);
-  document.getElementById("body-main").style.backgroundColor="pink"
+  document.getElementById("body-main").style.backgroundColor = 'rgba(255, 192, 203, 0.295)'
 
   //Si se hizo click en la tarjeta de pelicula lo guardo en localStorage
   //Muestro el link a la pág de calificaciones
@@ -44,15 +44,17 @@ window.onload = () => {
           genero.textContent = `Genero: ${movie.genre.name}`;
           card.appendChild(genero);
         }
-        //Acá guardo la info de la peli a la que se le hizo click
+        //Acá guardo la info de la peli a la que se le hizo click 
         const favoritas = document.createElement("p");
-        favoritas.innerHTML = `<div id="favoritos">&#9734;</div>`;
+        favoritas.setAttribute('id', 'clickFavoritas')
+        favoritas.innerHTML = `<div>&#9734; Agregar a favoritos</div>`;
         favoritas.addEventListener("click", function (e) {
           e.preventDefault()
           if (localStorage.calificaciones) {
             let arr = localStorage.calificaciones.split(',');
             arr.push(movie.id)
             localStorage.calificaciones = arr;
+            alert('Agregaste esta película a favoritos')
           } else {
             localStorage.setItem('calificaciones', movie.id)
           }
